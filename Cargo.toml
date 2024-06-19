@@ -1,15 +1,25 @@
 [package]
-name = "app_task_mgmt"
-authors = ["Puttipong Dou."]
+name = "rust_task_mgmt_api"
+authors = ["pdouvch"]
 license = "MIT"
 version = "0.1.0"
 edition = "2021"
 
 [dependencies]
 actix-web = "4.0"
+actix-rt = "2.5"
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
-diesel = { version = "1.4", features = ["sqlite", "r2d2", "chrono"] }
+diesel = { version = "2.2.1", features = ["postgres", "r2d2", "chrono"] }
+r2d2 = "0.8"
+chrono = "0.4"
+jsonwebtoken = "8.1"
 dotenv = "0.15"
-actix-rt = "2.0"
-uuid = { version = "1.0", features = ["v4"] }
+uuid = { version = "1.0", features = ["serde", "v4"] }
+bcrypt = "0.9"
+actix-service = "2.0"
+actix-http = "3.0"
+
+[dependencies.actix-identity]
+version = "0.4"
+features = ["actix-web"]
