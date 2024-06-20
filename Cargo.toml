@@ -1,7 +1,6 @@
 [package]
-name = "rust_task_api"
-authors = ["pdouvch"]
-license = "MIT"
+name = "rust_task-mgmt-system"
+authors = ["Pdouvch <puttipong.dou@gmail.com>"]
 version = "0.1.0"
 edition = "2021"
 
@@ -15,7 +14,7 @@ bcrypt = "0.11"
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
 lettre = "0.10"
-twilio = "0.7"
+twilio = "1.1.0"
 web-push = "0.8"
 uuid = "1.1"
 chrono = "0.4"
